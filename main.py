@@ -46,9 +46,9 @@ class ExchangeRates:
                 for currency in response_json:
                     if currency["ccy"] == currency_code:
                         print(
-                            f'{date:%d.%m.%Y},Курс {currency["ccy"]}:\n '
-                            f'Продаж {round(float(currency["sale"]), 2)} {currency["base_ccy"]} '
-                            f'Купівля {round(float(currency["buy"]), 2)} {currency["base_ccy"]}'
+                            f'{date:%d.%m.%Y},Курс {currency["ccy"]}:\n'
+                            f'Продаж {round(float(currency["sale"]), 2)} {currency["base_ccy"]}\n'
+                            f'Купівля {round(float(currency["buy"]), 2)} {currency["base_ccy"]}\n'
                         )
             if crypto_code:
                 url = f"{self.BASE_URL_BINANCE}{crypto_code}USDT"
